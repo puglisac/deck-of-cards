@@ -28,6 +28,11 @@ const Game = () => {
 		const res = await axios.get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1");
 		setDeck(res.data.deck_id);
 	};
+	const suffleDeck = async () => {
+		await axios.get(`https://deckofcardsapi.com/api/deck/${deck}/shuffle/`);
+		setImg("");
+		setDrawing(false);
+	};
 
 	const drawCard = async () => {
 		const card = await axios.get(`https://deckofcardsapi.com/api/deck/${deck}/draw/?count=1`);
@@ -41,6 +46,7 @@ const Game = () => {
 	return (
 		<div>
 			<button onClick={() => setDrawing(!drawing)}>{buttonText}</button>
+			<button onClick={suffleDeck}>Suffle Deck</button>
 			<div>{img ? <Card img={img} /> : null}</div>
 		</div>
 	);

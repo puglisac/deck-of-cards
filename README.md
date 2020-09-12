@@ -1,4 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deck of Cards
+This app was built for practice with React Effects. Clicking 'Draw Cards' begins drawing 1 card every second.  Clicking 'Pause' will pause the drawing.  When all the cards have been drawn an alert will notify that all cards have been drawn.  Click on 'Shuffle Deck' to reshuffle and reset the deck.
 
 ## Available Scripts
 
