@@ -17,6 +17,7 @@ const Game = () => {
 			let id;
 			if (drawing) {
 				setButtonText("Pause");
+				drawCard();
 				id = setInterval(() => drawCard(), 1000);
 			} else setButtonText("Draw Cards");
 			return () => clearInterval(id);
